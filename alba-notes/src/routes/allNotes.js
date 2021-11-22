@@ -1,17 +1,44 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
- class allNotes extends Component {
-  render() {
+
+
+ const  Modal = () => {
+
+    const [show, setShow] = useState(false);
+   
+  const handleModalClose = (e) => {
+    const currentClass = e.target.className;
+    
+    if (currentClass === 'modal-card') {
+      return;
+    }
+    
+    setShow(false);
+  };
+  
+  const handleModalOpen = () => {
+    setShow(true);
+  };
     return (
       <div>
-      <div className ='div-title'>
-        <h1>TODAS LAS NOTAS</h1>
-        <Link to = '/'>
-        <button>SALIR</button>
+        <nav>
+          <Link to = '/'>
+        <button className= 'out-button'>SALIR</button>
         </Link>
-      </div>
+        </nav>
+        <div className ='div-title'>
+        <button className="button" onClick={handleModalOpen}>+ NEW NOTE</button>
+        </div>
+
+        <div className="App">
+          <div hidden={!show}>
+            <div className="modal-background" onClick={handleModalClose}>
+               <div className="modal-card"></div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
-}
-export default allNotes;
+  
+export default Modal;
