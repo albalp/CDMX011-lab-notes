@@ -7,14 +7,24 @@ background-color: #321D2F;
   justify-content: center;
   align-items: flex-start;
   font-family: Redressed;
-  font-size: 50rem;
   text-align: center;
-  color: #74BBCA;
+  color: #F5BA5C;
+  
+}
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 2em;
+  padding: 2px;
 }
 nav{
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin: none;
+}
+h1{
+  margin-top: 1px;
 }
 
 button {
@@ -55,21 +65,54 @@ textarea{
   justify-content: center;
   text-align: center;
   font-size: 2em;
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
   left: 161px;
   top: 225px;
-  background: #A75757;
+  background: #55B0B5;
   box-shadow: 20px 20px 4px rgba(116, 187, 202, 0.25);
+ }
+ ::placeholder{
+   color: #E6E4F1;
  }
  .newNote{
   display: flex;
   align-items: center;
-  background-color: black;
   flex-direction: column;
+  width: 30em;
+  justify-content: center;
+ }
+ .div-notes{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+ }
+ .input-note-title{
+  width: 10em;
+  margin-bottom: 2em;
+  font-size: 2em;
+  text-align: center;
+  background-color: #55B0B5 ;
+  color: #321D2F;
+  border-radius: 0.5em;
+  padding: 7px;
+  border: none;
  }
  .submitButton{
-
+  background-color: #F5BA5C;
+  border-color: #413D5A;
+  color: white;
+  width: 5.5em;
+  height: 2em;
+  padding: 0;
+  margin: 1em;
+  font-family: Oxygen;
+  font-size: 30px;
+  box-shadow: inset 0 0 0 0 #F5BA5C;
+ }
+ .submitButton:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #413D5A;
  }
 
 .App {
@@ -83,15 +126,15 @@ textarea{
   font-family: Redressed;
   font-style: normal;
   font-weight: normal;
-  font-size: 50px;
-  line-height: 113px;
+  font-size: 3.5em;
   text-align: center;
-  color: #74BBCA;
+  color: #F5BA5C;
 }
 .out-button{
   width: 4em;
   height: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ left: 25em;
 }

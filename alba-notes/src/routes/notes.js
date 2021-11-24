@@ -1,21 +1,30 @@
-import React, { Component } from 'react';
-import db from '../firebase-init';
-//import { collection, addDoc } from "firebase/firestore";
- class Notes extends Component {
-  render() {
-    const prueba = (e) =>{
-      e.preventDefault();
-      console.log(db);
-    }
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { AddingNotes, ViewNotes } from '../firebase/create-collection';
+ const Notes = () => {
+  
+    // const prueba = (e) =>{
+    //  e.preventDefault();
+    //  console.log('Working') 
+    //  }   
+
     return (
-      <div>
-      <header><h1 className='div-title'>NOTE MY NOTES</h1></header>
-      <form className='newNote'>       
+      <div className='div-notes'>
+          <Link to = '/'>
+          <button className= 'out-button'>SALIR</button>
+        </Link>
+      <header>
+        <h1 className='div-title'>MY NOTES</h1>
+        </header>
+    
+      <form className='newNote'> 
+          <input className='input-note-title' placeholder='Título de la nota'></input>      
           <textarea placeholder='Escribe aquí tu nota'></textarea>
-          <button className='submitButton' onClick={prueba}>Save Note</button>
+          <button className='submitButton' type= 'submit' onClick={AddingNotes}>Save Note</button>
       </form>
       </div>
     );
   }
-}
+
+
 export default Notes;
