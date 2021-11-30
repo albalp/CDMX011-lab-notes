@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 // import { loginGoogle } from '../firebase/auth';
-class Login extends Component {
-  render() {
+ const Login = () =>  {
+
     return (
       
       <div className ='sectionMain'>
@@ -21,6 +21,6 @@ class Login extends Component {
       </div>
       
     );
-  }
+  
 }
 export default Login;

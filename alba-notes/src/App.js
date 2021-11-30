@@ -1,10 +1,10 @@
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import { Switch } from 'react-router';
-import Login from './routes/login';
-import Register from './routes/register';
-import Notes from './routes/notes';
-import Modal from './routes/allNotes';
+import Login from './components-routes/login';
+import Register from './components-routes/register';
+import Notes from './components-routes/notes';
+import Modal from './components-routes/allNotes';
 import './App.css';
 
 function App() {
