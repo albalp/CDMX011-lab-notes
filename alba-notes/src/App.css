@@ -59,8 +59,8 @@ button {
    font-size: 4rem;
    text-align: center;
  }
- oldPen{
-   
+ .oldPen{
+   margin: 3px
  }
 
 textarea{
@@ -85,10 +85,35 @@ textarea{
   width: 30em;
   justify-content: center;
  }
+
+ .allNotes{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2em;
+  width: 400px;
+  height: 400px;
+  left: 161px;
+  top: 225px;
+  background: #413D5A;
+  color: #C8FCEA;
+  margin: 5px;
+
+ }
+ .divShowNote{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 55em;
+ }
+
  .div-notes{
    display: flex;
    align-items: center;
    flex-direction: column;
+   font-family: Oxygen;
+   font-size: 1.5em;
  }
  .input-note-title{
   width: 10em;

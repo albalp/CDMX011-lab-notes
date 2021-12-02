@@ -1,5 +1,5 @@
 import db from "../firebase/firebase-init";
-import { Firestore, collection, onSnapshot } from "@firebase/firestore";
+import { collection, onSnapshot } from "@firebase/firestore";
 import { useState, useEffect } from "react";
 
 function ShowNote(){
@@ -10,13 +10,11 @@ function ShowNote(){
         })
     })
 
-
-
     return(
-        <div>{datos.map((note)=>(
-            <div key={note.id}>
-            <p>{note.title}</p>
-            <p>{note.note}</p>
+        <div className='divShowNote'> {datos.map((note)=>(
+            <div key={note.id} >
+            <p className='allNotes'>{note.title} {note.note}</p>
+            
             </div>))
             
             }
