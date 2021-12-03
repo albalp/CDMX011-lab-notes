@@ -24,7 +24,7 @@ nav{
   margin: none;
 }
 h1{
-  margin-top: 1px;
+  margin:none;
 }
 
 button {
@@ -59,9 +59,6 @@ button {
    font-size: 4rem;
    text-align: center;
  }
- .oldPen{
-   margin: 3px
- }
 
 textarea{
   display: flex;
@@ -88,7 +85,8 @@ textarea{
 
  .allNotes{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
   text-align: center;
   font-size: 2em;
   width: 400px;
@@ -98,8 +96,19 @@ textarea{
   background: #413D5A;
   color: #C8FCEA;
   margin: 5px;
-
+  padding: 1px;
  }
+ .paragraphNoteTitle{
+  background: #413D5A;
+  color: #F5BA5C;
+  margin: 1px;
+ }
+ .paragraphNoteText{
+  background: #413D5A;
+  font-size: 1em;
+  margin-bottom: 2.5em;
+ }
+
  .divShowNote{
    display: flex;
    flex-direction: row;
@@ -117,14 +126,15 @@ textarea{
  }
  .input-note-title{
   width: 10em;
-  margin-bottom: 2em;
-  font-size: 2em;
+  margin: 1em;
+  font-size: 1.5em;
   text-align: center;
   background-color: #55B0B5 ;
   color: #321D2F;
   border-radius: 0.5em;
   padding: 7px;
   border: none;
+  width: 8em;
  }
  .submitButton{
   background-color: #F5BA5C;
@@ -157,12 +167,38 @@ textarea{
   font-size: 3.5em;
   text-align: center;
   color: #F5BA5C;
+  margin: 2px;
+  margin-top: 2px;
 }
-.out-button{
-  width: 4em;
-  height: 2em;
- display: flex;
- align-items: center;
- justify-content: center;
- left: 25em;
+.exit{
+  width: 6em;
+  height: 3em;
+ 
 }
+.divExit{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.oldPen{
+  margin: 3px;
+  width: 9em;
+  position: relative;
+}
+.editImg{
+  width: 1.2em;
+  height: 1.2em;
+  background: #413D5A;
+}
+.eraseImg{
+  width: 1.2em;
+  height: 1.2em;
+  background: #413D5A;
+}
+.divEraseEdit{
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  background: #413D5A;
+}
+

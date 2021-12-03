@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { collection, addDoc } from "firebase/firestore";
 import db from '../firebase/firebase-init'
 import oldpen from '../img/oldpen.png';
-//import pen from '../img/pen.png'
+import exit from '../img/exit.png'
 import ShowNote from './showNote';
 
  const Notes = () => {
@@ -35,23 +35,28 @@ import ShowNote from './showNote';
       
     return (
       
-      <div className='div-notes'>
+      <div >
           <Link to = '/'>
-          <button className= 'out-button'>SALIR</button>
+          <div className='divExit'>
+          <img className= 'exit' src={exit} alt='exit'></img>
+          </div>
         </Link>
-      <header>
+      <header className='div-notes'>
         <h1 className='div-title'>MY NOTES</h1>
        <img src={oldpen} alt='oldpen' className='oldPen'/>
         </header>
         <Fragment>
+        <div className='div-notes'>
       <form className='newNote' onSubmit={AddingNotes}> 
           
           <input className='input-note-title' placeholder='Título de la nota' type= 'text' name='title' onChange={handleInputChange}></input>      
           <textarea placeholder='Escribe aquí tu nota' type= 'text' name='note' onChange={handleInputChange}></textarea>
           <button className='submitButton' type= 'submit' >Save Note</button>
       </form>
-      </Fragment>
+      
       <ShowNote />
+      </div>
+      </Fragment>
       </div>
     
    
