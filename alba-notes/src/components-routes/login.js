@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { loginGoogle } from '../firebase/auth';
+import loginWithGoogle from '../firebase/auth';
+import google from '../img/google.png'
+
+
  const Login = () =>  {
 
+  
     return (
       
       <div className ='sectionMain'>
@@ -15,7 +19,9 @@ import { Link } from 'react-router-dom';
         <p>¿No tienes cuenta? ¡Regístrate!</p>
         </Link>
         <Link to = '/notes'>
-        <p to='/notes'>Continúa con Google</p>
+        <p onClick={loginWithGoogle}>Continúa con Google
+        <img src={google} alt='GoogleIcon' className='googleIcon'></img>
+        </p>
         </Link>
       </div>
       </div>

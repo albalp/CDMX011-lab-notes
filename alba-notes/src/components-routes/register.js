@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
         </Link>
       </div>
       <div>
-      <Link to = '/allNotes'>
+      <Link to = '/'>
         <p>¿Ya tienes cuenta? Inicia Sesión</p>
         </Link>
       </div>
