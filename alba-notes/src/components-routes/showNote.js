@@ -18,7 +18,7 @@ function ShowNote(){
     return(
         <div className='divShowNote'> {datos.map((note)=>(
             <div key={note.id} className='allNotes'>
-            <p className='paragraphNoteTitle' >{note.title}</p>
+            <p id='p' className='paragraphNoteTitle' >{note.title}</p>
             <p className='paragraphNoteText' >{note.note}</p>
             <div className='divEraseEdit'>
             <img src={editar} alt='pen' className='editImg'></img>
