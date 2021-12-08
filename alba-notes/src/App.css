@@ -52,6 +52,9 @@ button {
  }
 
 textarea{
+  overflow-y: scroll;
+  height: 100px;
+  resize: none;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -98,9 +101,11 @@ textarea{
  }
  .paragraphNoteText{
   background: #6C374A;
-  font-size: 1em;
+  font-size: 35px;
   font-family: -apple-system,  Optima;
-
+  overflow-y: scroll;
+  height: 200px;
+  resize: none;
  }
 
  .divShowNote{
@@ -184,13 +189,13 @@ textarea{
   position: relative;
 }
 .editImg{
-  width: 1.2em;
-  height: 1.2em;
+  width: 1em;
+  height: 1em;
   background: #6C374A;
 }
 .eraseImg{
-  width: 1.2em;
-  height: 1.2em;
+  width: 1em;
+  height: 1em;
   background: #6C374A;
 }
 .divEraseEdit{
