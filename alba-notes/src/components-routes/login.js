@@ -6,9 +6,7 @@ import google from '../img/google.png'
 
  const Login = () =>  {
 
-  
     return (
-      
       <div className ='sectionMain'>
       <div className ='div-title'>
         <h1>NOTE MY NOTES</h1>
@@ -19,8 +17,8 @@ import google from '../img/google.png'
         <p>¿No tienes cuenta? ¡Regístrate!</p>
         </Link>
         <Link to = '/notes'>
-        <p onClick={loginWithGoogle}>Continúa con Google
-        <img src={google} alt='GoogleIcon' className='googleIcon'></img>
+        <p onClick={loginWithGoogle}>
+        <img src={google} alt='GoogleIcon' className='googleIcon'></img>Continúa con Google
         </p>
         </Link>
       </div>

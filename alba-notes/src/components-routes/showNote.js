@@ -1,9 +1,9 @@
 import db from "../firebase/firebase-init";
 import { collection, onSnapshot } from "@firebase/firestore";
 import { useState, useEffect } from "react";
-import { doc, deleteDoc, setDoc } from "firebase/firestore";
 import eliminar from "../img/eliminar.png"
 import editar from "../img/editar.png"
+import deleteNote from "../firebase/delete-document";
 
 function ShowNote(){
     const [datos, setDatos] = useState([]);
@@ -13,15 +13,6 @@ function ShowNote(){
             setDatos(doc.docs.map((doc) =>({...doc.data(),id: doc.id}))) //Recovering the ID
         })
     })
-
-    const deleteNote = async(id) =>{
-        
-        if(window.confirm('¿Estás seguro de querer eliminar esta nota?') === true){
-            const noteDoc = doc(db,'notes',id);
-            await deleteDoc(noteDoc)
-            console.log('Successfully deleted note ' + id)
-        }
-    }
     
     
     return(

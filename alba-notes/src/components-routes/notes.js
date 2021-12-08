@@ -28,7 +28,7 @@ import ShowNote from './showNote';
       });
       console.log({docRef})
       console.log("Document written with ID: ", docRef.id );
-  
+      document.forms['formNote'].reset();
     }
    
       
@@ -46,10 +46,10 @@ import ShowNote from './showNote';
         </header>
         <Fragment>
         <div className='div-notes'>
-      <form className='newNote' onSubmit={AddingNotes}> 
+      <form name='formNote' className='newNote'  onSubmit={AddingNotes}> 
           
-          <input className='input-note-title' placeholder='Título de la nota' type= 'text' name='title' autofocus onChange={saveNoteFirestore}></input>      
-          <textarea placeholder='Escribe aquí tu nota' type= 'text' name='note' onChange={saveNoteFirestore}></textarea>
+          <input className='input-note-title' placeholder='Título de la nota' type= 'text' name='title' onChange={saveNoteFirestore}></input>      
+          <textarea placeholder='Escribe aquí tu nota' type= 'text' name='note' onChange={saveNoteFirestore} ></textarea>
           <button className='submitButton' type= 'submit' >Save Note</button>
       </form>
       
